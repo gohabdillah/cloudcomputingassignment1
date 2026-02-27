@@ -1,0 +1,15 @@
+# Space-DC experiment configuration
+rtt_base_ms: 200.0          # 200 ms base RTT (satellite / deep link)
+buffer_pkts: 300            # switch buffer (packets)
+ecn_thresh_pkts: 30         # ECN marking threshold K
+dt_ms: 0.1                  # simulation time-step
+duration_ms: 5000.0         # 5 seconds (longer to see outage effects)
+
+num_long_flows: 10          # all same CC per run
+short_lambda: 3.0           # Poisson short flows per second
+short_size_bytes: 10240     # 10 KB
+
+# Space-specific parameters
+rtt_jitter_std_ms: 50.0     # N(0, 50 ms) jitter on RTT
+outage_prob_per_sec: 0.1    # 10 % chance of outage per second
+outage_duration_ms: 1000.0  # each outage lasts 1 s (no ACKs)

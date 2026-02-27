@@ -1,0 +1,10 @@
+# Data-Center experiment configuration
+rtt_base_ms: 0.1           # 100 μs base RTT
+buffer_pkts: 300            # switch buffer (packets)
+ecn_thresh_pkts: 30         # ECN marking threshold K
+dt_ms: 0.1                  # simulation time-step
+duration_ms: 5000.0         # 5 second simulation
+
+long_flows_per_cc: 5        # 5 Reno + 5 DCTCP = 10 total
+short_lambda: 5.0           # Poisson arrival rate (per second)
+short_size_bytes: 102400    # 100 KB short flows (need >1 timestep at 10 Gbps)
